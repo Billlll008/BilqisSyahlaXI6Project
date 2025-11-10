@@ -1,0 +1,921 @@
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.todo{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.gap-jawa{
+    position: relative;
+    text-align: center;
+    height: 200vh;
+}
+body{
+
+   background-color: rgb(104, 129, 104);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+main{
+    flex-grow: 1;
+    height: 100vh;
+    margin-bottom: 100vh;
+    
+}
+header{
+   background-color: #303535;
+    color: white;
+    padding: 10px ;
+    text-align: center;
+    min-height: 140px;
+    display: flex;
+    z-index: 2;
+}
+header img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    float: left;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+header h2{
+    text-align: center;
+    padding-top: 2.5rem;
+    font-size: 25pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 0;
+}
+.navbar{
+    margin-left: 45%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+}    
+
+h2{
+    text-align: center;
+}
+.navbar ul{
+    list-style: none;
+    text-decoration: none;   
+    padding: 0px;
+    margin: 0px;
+    overflow: visible;
+    justify-content: center;
+    position: absolute;
+}
+
+.navbar a{
+     color: aliceblue;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    position: sticky;
+    border-radius: 3px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.navbar a:hover{
+    background-color: rgb(31, 36, 34);
+}
+.navbar li{
+    float: right;
+    left: 0%;
+    margin-left: 10px;
+}
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+}
+.navbar ul li a{
+    text-align: center;
+    padding: 20px 25px;
+    display: block;
+}
+.navbar ul li ul{
+    display: none;
+    position: absolute;
+    background: #1a2d2e;
+    left: 0;
+    top: 35px;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow:#141516;
+    
+}
+.navbar ul li ul li  {
+    margin: 0;
+    width: 150px;
+    display: block;
+    
+}
+.navbar ul li ul li a {
+    padding: 10px 15px;
+    font-weight: normal;
+    display: block;
+}
+.navbar ul li:hover ul {
+    display: block;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+section{
+    margin:20px;
+    flex:3;
+    border:1px rgb(65, 56, 58);
+    padding: 80;
+    text-shadow: #141516;
+}
+section article{
+    background-color: rgb(63, 38, 35);
+    color: rgb(255, 255, 255);
+    font-size: 12pt;
+  
+    margin-bottom: 15px;
+    padding: 80px;
+}
+article img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin: auto;
+    
+}
+:root{
+    --bg-color: #644747;
+    --border-color: #422d2d;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 45vh;
+    gap: 0.625rem;
+    padding: 1.25rem;
+    
+}
+.card{
+    position: relative;
+}
+.cardimg{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1.25rem;
+    border: 0.5rem solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.cardimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    float: left;
+}
+
+.cardimg a:link, a:visited {
+ width: 12.5rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    border-top: 0.5rem solid var(--border-color);
+    border-left: 0.5rem solid var(--border-color);
+    border-radius: 1rem 0 0 0;
+    padding: 0.3rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+.cardimg2 a:link, a:visited {
+ width: 12.5rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    border-top: 0.5rem solid var(--border-color);
+    border-left: 0.5rem solid var(--border-color);
+    border-radius: 1rem 0 0 0;
+    padding: 0.3rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+.cardimg a:hover{
+    background-color: #3a2d2d;
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+.cardimg2 a:hover{
+    background-color: #3a2d2d;
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+.textprovinsih2{
+    display: flex;
+    padding-left: 20px;
+    color: aliceblue;
+    border-bottom: 3px solid #422d2d;
+    text-shadow: #141516;
+    font-size: 30pt;
+}
+.pProvinsi{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: aliceblue;
+    text-shadow: #141516;
+    text-align: justify;
+    font-size: 15pt;
+    border-right: 0px solid;
+    margin-right: 100px;
+}
+.card2{
+    position: relative;
+}
+.cardimg2{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1.25rem;
+    border: 0.5rem solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    float: right;
+}
+.cardimg2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    float: right;
+}
+.cardimg2 button{
+    width: 12.5rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    border-top: 0.5rem solid var(--border-color);
+    border-left: 0.5rem solid var(--border-color);
+    border-radius: 1rem 0 0 0;
+    padding: 0.3rem;
+    color: aliceblue;
+}
+footer{
+  margin-top: auto;
+  bottom: 0;
+  margin-bottom: 0%;
+  position: fixed;
+  width: 100%;
+
+}
+.footericon{
+    background-color: #141516;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 0;
+    padding: 15px;
+    text-decoration: none;
+    bottom: 0%;
+    width: 100%;
+}
+.footericon ul{ 
+    text-decoration: none;
+    list-style: none;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*____________________PAGE ABOUT______________________*/
+.aboutus{
+    background-image: url(stylemyindex-bgAbout.jpg);
+    background-size: cover;
+    width: 100rem;
+    height: 70rem;
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    border: 5px solid rgb(43, 26, 19);
+    padding: 0;
+    margin: 0;
+    margin-left: 8rem;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding-top: 0;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+}
+.aboutuscard{
+    text-align: justify;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #213327d8;
+    color: aliceblue;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    margin-top: 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem ;
+    padding-bottom: 3rem;
+    border-radius: 20px;
+    border: 1px solid white;
+
+}
+.aboutuscard h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50pt;
+    text-align: center;
+}
+.aboutuscard p{
+    font-size: 20pt;
+    margin-top: 2rem;
+}
+
+/*____________________PAGE JAWA BARAT______________________*/
+.Header-Jabar{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+    height: 20vh;
+    
+}
+.bgjabar{
+    background-image: url(bandungbgver.jpg);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    border: 5px solid #141516;
+    
+}
+.bgjabar img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardJAWA{
+    width: 50rem;
+    height: 50rem;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    float: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+    place-items: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+    align-items: center;
+    margin-top: -1px;
+    border: 4px solid #141516;
+    border-top: none; 
+}
+.cardJAWAimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    position: relative;
+    
+}
+.sejarah{
+    position: relative;
+    top: 65vh;
+    display: flex;
+    
+}
+.sejarahtext{
+    position: relative;
+    word-wrap: break-word;
+    text-align: justify;
+    color: aliceblue;
+    margin-right: 20px;
+}
+.sejarahtext p{
+    padding-top: 10px;
+    font-size: 15pt;
+    background-color: #422d2d;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: justify;
+}
+.sejarahtext h1{
+    font-size: 30pt;
+    font-weight: 0;
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
+    margin-left: 20px;
+}
+.sejarahtext h1::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: aliceblue;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+.sejarahtext h1:hover::after{
+    transform: scaleX(1);
+}
+iframe{
+    width: 80%;
+    height: 300px;
+    float: right;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 5px solid #141516;
+    margin-top: 3vh; 
+}
+.sej-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70vh;
+    float: left;
+    border: 5px solid rgba(48, 38, 38, 0.747);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50vh;
+}
+
+.sej-card{
+    background-color: var(--border-color);
+    width: 350px;
+    border: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.20);
+    margin: 20px;
+
+}
+.sej-card img{
+    width: 100%;
+    height: auto;
+}
+.content-sejarah h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: aliceblue;
+    padding: 10px;
+    cursor: pointer;  
+  position: relative;
+    
+}
+.content-sejarah p{
+    color: rgba(240, 248, 255, 0.616);
+    font-size: 20px;
+    line-height: 0.8;
+    padding: 10px;
+}
+.content-sejarah a{
+    display: inline-block;
+    padding: 10px;
+    background-color: #2e1c1c;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: rgb(240, 248, 255);
+    cursor: pointer;
+    position: relative;
+  z-index: 10;
+  pointer-events: all;
+}
+.content-sejarah a:hover{
+    background-color: #130f0f;
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+.gal-card img{
+    width: 450px;
+    height: 400px;
+}
+.gal-card{
+    background-color: var(--border-color);
+    width: 350px;
+    border: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.20);
+    margin: 20px;
+}
+/*____________________PAGE SEJARAH KOTA______________________*/
+.title-sej{
+    margin-top: 5vh;
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.title-sej h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 35pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.title-sej p{
+    text-align: center;
+    color: aliceblue;
+    background-color: var(--border-color);
+    border: 2px solid white;
+    font-size: 20pt;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    
+}
+.title-sej p:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;
+}
+.line-vertikal{
+    justify-content: center;
+    justify-items: center;
+    background-color: aliceblue;
+    height: 300vh;
+    width: 5px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    padding: auto;
+    margin: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.sej-page1{
+    display: flex;
+    justify-content: start;
+    float: left;
+    width: 500px;
+    height: auto;
+    border: 5px solid rgba(48, 38, 38, 0.747);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    align-items: start;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-top: 10vh;
+    margin-left: 20vh;
+
+}
+.sej-page1:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;
+}
+.sej-page2:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;
+}
+
+.sej-page1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+}
+.content-sej-page{
+    justify-content: start;
+    float: left;
+    align-items: start;
+    position: relative;
+    background-color: var(--border-color);
+    color: aliceblue;
+    padding: 10px;
+    margin-left: 0;
+}
+.content-sej-page h2{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20pt;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content-sej-page p{
+    text-align: justify;
+    font-size: 13pt;
+    padding: 7px;
+
+}
+.content-sej-page2 h2{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20pt;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content-sej-page2 p{
+    text-align: justify;
+    font-size: 13pt;
+    padding: 7px;
+
+}
+.sej-page2{
+    display: flex;
+    
+    float: right;
+    width: 500px;
+    height: auto;
+    border: 5px solid rgba(48, 38, 38, 0.747);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-top: 30vh;
+    margin-right: 20vh;
+
+}
+.sej-page2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+}
+.content-sej-page2{
+    float: right;
+    align-items: start;
+    position: relative;
+    background-color: var(--border-color);
+    color: aliceblue;
+    padding: 10px;
+    margin-left: 0;
+}
+.cangkang-sej{
+    background-color: #102e278a;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+/*------------------------PAGE GALERI---------------------------*/
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.gallery{
+    background-color: #2e1c1c;
+    object-fit: cover;
+    width: 500px;
+    height: 600px;
+    display: inline-block;
+    margin: 10px;
+    border: 5px solid #2e211d;
+    border-bottom: 3pc solid #2e211d;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 100px
+
+}
+.content-gal{
+    color: aliceblue;
+   text-align: center;
+    width: 500px;
+    font-size: 20pt;
+}
+.cangkang-gal{
+    align-items: center;
+    margin-top: 5vh;
+    background-color: #1a2d2e;
+    justify-content: center;
+    align-items: center;
+    width: 150vh;
+    height: 800px;
+    margin-left: 200px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+}
+.cangkang-gal{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20pt;
+    padding-top: 20px;
+}
+.gallery:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;
+}
+/*____________________PAGE SEJARAH KOTA______________________*/
+.seni{
+    display: inline-block;
+    border: 5px solid #2e211d;
+    margin: 20px;
+    width: 500px;
+    height: 500px;
+    background-color: #2e211d;
+    border-bottom: 4pc solid #2e211d;
+    margin-left: 7.5vh;
+    
+}
+.seni p{
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+    font-size: 20pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.seni img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.seni:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;}
+.cangkang-seni h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30pt;
+    padding-top: 10px;
+}
+.cangkang-seni{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    align-items: center;
+    background-color: #27332eb9;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+}
+/*____________________PAGE KONTAK______________________*/
+.containerKontak{
+    background-color: #2e1a1a;
+    border-radius: 20px;
+    border: 3px solid aliceblue;
+    margin-top: 5vh;
+    height: 300px;
+    display: list-item;
+    
+}
+.containerKontak h1{
+    color: aliceblue;
+    font-size: 20pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    text-align: center;
+
+}
+.cardkontak{
+    justify-content: center;
+    justify-items: center;
+    padding: 5px;
+    position: relative;
+
+}
+.form{
+    color: white;
+    padding: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    margin-left: 50%;
+    text-align: justify;
+    margin-bottom: 8px;
+    font-weight: bold;
+    padding: 20px;
+}
+.form a{
+    text-decoration: none;
+    color: aliceblue;
+    width: 80px;
+    height: 150px;
+    padding: 20px;
+    height: 80px;
+    width: 150px;
+    font-size: 20px;
+    background-color: #4d2e2e;
+    border-radius: 40px;
+    margin-top: 100vh;
+    padding: 8px 16px;
+  
+}
+/*--------------------LASTTTTT----------------------*/
+.anu{
+    display: inline-block;
+    border: 5px solid #2e211d;
+    margin: 20px;
+    width: 500px;
+    height: 600px;
+    background-color: #2e211d;
+    border-bottom: 9pc solid #2e211d;
+    margin-left: 7.5vh;
+    
+}
+.anu p{
+    text-align: center;
+    padding: 6px;
+    color: aliceblue;
+    font-size: 20pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.anu img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.anu:hover{
+    transform: rotateX('$deg') rotateY('$deg') scale(1.05);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    scale: 1.1;
+}
+.anu h5{
+    text-align: center;
+    padding: 6px;
+    color: rgba(240, 248, 255, 0.685);
+    font-size: 15pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
